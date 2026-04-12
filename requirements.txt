@@ -1,0 +1,12 @@
+endee
+sentence-transformers
+groq
+python-dotenv
+flask
+pypdf
+python-docx
+markdown
+beautifulsoup4
+numpy
+pandas
+plotly

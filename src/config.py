@@ -1,0 +1,32 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class Config:
+    # API Keys
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
+    ENDEE_API_KEY = os.getenv("ENDEE_API_KEY", "local")
+
+    # Chunking
+    CHUNK_SIZE = 500
+    CHUNK_OVERLAP = 50
+
+    # Embedding
+    EMBEDDING_MODEL = "all-MiniLM-L6-v2"
+    EMBEDDING_DIMENSION = 384
+
+    # Search
+    TOP_K_RESULTS = 5
+    SIMILARITY_THRESHOLD = 0.3
+
+    # LLM
+    GROQ_MODEL = "llama-3.3-70b-versatile"
+    MAX_TOKENS = 1024
+    TEMPERATURE = 0.1
+
+    # Collection
+    COLLECTION_NAME = "endee_rag"
+
+    # History
+    MAX_HISTORY_TURNS = 5
