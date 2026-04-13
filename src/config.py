@@ -7,6 +7,7 @@ class Config:
     # API Keys
     GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
     ENDEE_API_KEY = os.getenv("ENDEE_API_KEY", "local")
+    ENDEE_URL = os.getenv("ENDEE_URL", "http://localhost:8080")
 
     # Chunking
     CHUNK_SIZE = 500
