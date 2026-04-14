@@ -69,9 +69,11 @@ class DocumentProcessor:
         # Add chunk metadata
         enriched_chunks = []
         for i, chunk in enumerate(chunks):
+            # chunk is a dict with 'text', 'chunk_index', etc. from TextSplitter
+            chunk_text = chunk["text"] if isinstance(chunk, dict) else str(chunk)
             enriched_chunks.append({
                 "chunk_id": f"{doc_id}_chunk_{i}",
-                "text": chunk,
+                "text": chunk_text,
                 "chunk_index": i,
                 "total_chunks": len(chunks),
                 "source": path.name,
@@ -127,9 +129,11 @@ class DocumentProcessor:
 
         enriched_chunks = []
         for i, chunk in enumerate(chunks):
+            # chunk is a dict with 'text', 'chunk_index', etc. from TextSplitter
+            chunk_text = chunk["text"] if isinstance(chunk, dict) else str(chunk)
             enriched_chunks.append({
                 "chunk_id": f"{doc_id}_chunk_{i}",
-                "text": chunk,
+                "text": chunk_text,
                 "chunk_index": i,
                 "total_chunks": len(chunks),
                 "source": source_name,

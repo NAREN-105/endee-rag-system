@@ -3,7 +3,7 @@ sentence-transformers
 groq
 python-dotenv
 flask
-pypdf
+PyPDF2
 python-docx
 markdown
 beautifulsoup4
